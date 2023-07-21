@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.game {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-box {
+    width: 1024px;
+}
+
+.game-chat {
+    margin: 30px;
+    padding: 10px;
+    width: 300px;
+    max-height: 777px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.game-chat, .field-box {
+    border: 2px solid #d0d0d0;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title, .field {
+    width: 100%;
+}
+
+h1 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 30px;
+    padding: 10px 0;
+    margin: 0;
+}
+.field-box {
+    float: left;
+}
+
+.field {
+    position: relative;
+    height: 640px;
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+}
+
+.field *{
+    width: 25px;
+    height: 26.5px;
+}
+
+.tile {
+    position: relative;
+    background-size: 100%;
+    background-image: url(../images/tile-.png);
+    z-index: 5;
+}
+
+.tile.rotate {
+    -moz-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.tile.tileW {
+    background-image: url(../images/tile-W.png);
+}
+
+.tile.tileE {
+    background-image: url(../images/tile-E.png);
+    z-index: 10;
+}
+
+.tile.tileP {
+    background-image: url(../images/tile-P.png);
+    z-index: 10;
+}
+
+.tile.tileHP {
+    background-image: url(../images/tile-HP.png);
+    z-index: 9;
+}
+
+.tile.tileSW {
+    background-image: url(../images/tile-SW.png);
+    z-index: 9;
+}
+
+.field .tile .health {
+    background-color: #ff0000;
+    z-index: 11;
+    position: relative;
+    height: 3px;
+}
+.field .tileP .health {
+    background-color: #00ff00;
+    z-index: 11;
+    position: relative;
+    height: 3px;
+}
+
+.info-panel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inventory-box {
+    border: 2px solid #d0d0d0;
+    float: left;
+}
+
+.inventory * {
+    width: 32px;
+    height: 32px;
+}
+
+.inventory {
+    display: flex;
+    position: relative;
+    width: 800px;
+    height: 32px;
+}
+
+.cl {
+    clear: both;
+    display: block;
+}
